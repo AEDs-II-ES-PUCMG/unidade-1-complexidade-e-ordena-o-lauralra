@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Random;
 
 public class App {
@@ -50,9 +49,16 @@ public class App {
         System.out.println("Movimentações: " + bolha.getMovimentacoes());
         System.out.println("Tempo de ordenação (ms): " + bolha.getTempoOrdenacao());
 
-        /* TO DO
-        *Fazer a implementacao do restante do main para a ordenacao 
-        *  com os algoritmos InsertionSort e SelectionSort
-        */
+        
+        InsertionSort<Integer> insert = new InsertionSort<>();
+        Integer[] vetorOrdenadoInsert = insert.ordenar(vetor);
+
+
+        System.out.println("\nVetor ordenado método Insertion:");
+        System.out.println("Comparações: " + insert.getComparacoes());
+        System.out.println("Movimentações: " + insert.getMovimentacoes());
+        System.out.println("Tempo de ordenação (ms): " + insert.getTempoOrdenacao());
+
+        
     }
 }
