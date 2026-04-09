@@ -68,7 +68,7 @@ public class AppOficina {
 
     static void cabecalho() {
         limparTela();
-        System.out.println("XULAMBS COMÉRCIO DE COISINHAS v0.2\n================");
+        System.out.println("XULAMBINHAS COMÉRCIO DE COISINHAS v0.2\n================");
     }
     
 
@@ -166,7 +166,14 @@ public class AppOficina {
         cabecalho();
         
         int opcao = exibirMenuOrdenadores();
-        //Complete com a sua lógica
+        
+        switch (opcao) {
+            case 1 -> ordenador = new Bubblesort<>();
+            case 2 -> ordenador = new InsertSort<>();
+            case 3 -> ordenador = new SelectionSort<>();
+            case 4 -> ordenador = new Mergesort<>();
+        }
+
         ordenador = null;
     }
 
