@@ -23,6 +23,7 @@ public class Bubblesort<T extends Comparable<T>> implements IOrdenador<T>{
 
 	@Override
 	public T[] ordenar(T[] dados, Comparator<T> comparador) {
+		System.out.println("Iniciando ordenação de " + dados.length + " elementos...");
 		T[] dadosOrdenados = Arrays.copyOf(dados, dados.length);
 		int tamanho = dadosOrdenados.length;
 		
