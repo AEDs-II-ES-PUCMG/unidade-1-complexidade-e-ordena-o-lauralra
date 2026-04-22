@@ -90,8 +90,8 @@ public class AppOficina {
         System.out.println("2 - Inserção");
         System.out.println("3 - Seleção");
         System.out.println("4 - Mergesort");
-        System.out.println("4 - Heapsort");
-        System.out.println("4 - Quicksort");
+        System.out.println("5 - Heapsort");
+        System.out.println("6 - Quicksort");
         System.out.println("0 - Finalizar");
        
         return lerNumero("Digite sua opção", Integer.class);
@@ -180,7 +180,9 @@ public class AppOficina {
         }
 
         Produto[] resultado = ordenador.ordenar(produtos);
-        System.out.println(resultado);
+        for (Produto produto : resultado) {
+            System.out.println(produto);
+        }
 
     }
 
@@ -222,7 +224,7 @@ public class AppOficina {
                 case 0 -> System.out.println("FLW VLW OBG VLT SMP.");
             }
             pausa();
-        }while (opcao != 0);
+        } while (opcao != 0);
         teclado.close();
     }                        
 }
